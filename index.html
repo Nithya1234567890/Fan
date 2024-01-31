@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 98vh;
+            background:url(http://www.healthgoesup.com/wp-content/uploads/2011/05/1-c.jpg)no-repeat center center/cover;
+        }
+        h1{
+            background: linear-gradient(90deg,blue,red);
+            background-clip: text;
+            color: transparent;
+            font-family: cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 0;
+        }
+        i{
+            color: blue;
+        }
+        img{
+            height: 200px;
+            margin: 50px;
+            padding: 30px;
+            border: 5px solid black;
+            border-radius: 50%;
+            animation: round linear infinite;
+        }
+        @keyframes round {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .buttons{
+            display: flex;
+            padding: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            border: 1px solid black;
+            background-color: lightgrey;
+            border-radius: 100%;
+            margin: 10px;
+            padding: 14px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .btn:hover{
+            cursor: pointer;
+            box-shadow: 1px 1px 10px black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Do You Want Air&nbsp;<i class="fa-solid fa-face-grin-hearts"></i></h1>
+    <div class="bg-img">
+    <img id="img" src="https://www.freepnglogos.com/uploads/fan-png/fan-svg-png-icon-download-onlinewebfontsm-31.png" alt="" srcset="">
+    </div>
+    <div class="buttons">
+        <div class="btn" onclick="funOn()" style="background-color: green;" id="btn1">ON</div>
+        <div class="btn" onclick="funOf()" style="background-color: red;" id="btn2">OF</div>
+        <div class="btn" onclick="fun1()" style="padding-left: 20px; padding-right: 20px"  id="btn3">1</div>
+        <div class="btn" onclick="fun2()" style="padding-left: 20px; padding-right: 20px"  id="btn4">2</div>
+        <div class="btn" onclick="fun3()" style="padding-left: 20px; padding-right: 20px"  id="btn5">3</div>
+    </div>
+    <script>
+        let img=document.getElementById('img');
+        function funOn(){
+            img.style.animationDuration=1+"s";
+        }
+        function funOf(){
+            img.style.animationDuration=0+"s";
+        }
+        function fun1(){
+            img.style.animationDuration=0.8+"s";
+        }
+        function fun2(){
+            img.style.animationDuration=0.5+"s";
+        }
+        function fun3(){
+            img.style.animationDuration=0.1+"s";
+        }
+    </script>
+</body>
+</html>
